@@ -1,0 +1,76 @@
+.main-banner {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-pink);
+    position: relative;
+}
+
+.main-banner > .item-wrap {
+    width: 630px;
+    height: 630px;
+    background-color: #E9F3F4;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+.main-banner > h1 {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.main-banner > .back-text {
+    width: 640px;
+    font-size: 135px;
+
+    position: absolute;
+    top: 130px;         /*TODO: 여기 top값 반응형 할 때 수정좀*/
+    right: 50%;
+}
+.main-banner > .front-text { 
+    max-width: 480px;
+    font-size:100px;
+
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    z-index: 100;
+}
+
+.next-btn-wrap{
+    width: 145px;
+    height:100px;
+
+    position: absolute;
+    left: 160px;
+    bottom: 160px;
+    
+    /* background-color: red; */
+}
+
+.next-btn-wrap > .btn-wrap{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.next-btn-wrap > .btn-wrap > button{
+    width: 50px;
+    height: 50px;
+    
+    border: none;
+    border-radius: 50%;
+    
+    background-color: rgb(255, 255, 255, 0.3);
+}
+.next-btn-wrap > .btn-wrap > button > ion-icon{
+    font-size: 20px;
+    color: #fff;
+}
+.next-btn-wrap > .btn-wrap > button:hover{
+    background-color: rgb(255, 255, 255, 0.5);
+    transition: .2s;
+}
