@@ -1,0 +1,244 @@
+.img-box {
+    overflow: hidden;
+}
+.img-box img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+}
+
+
+/* 브랜드 */
+.brand{
+    width: 100%;
+    height: 600px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-contents {
+    width: 370px;
+    margin-left: 70px;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-contents > h4{
+    font-weight: var(--font-semibold);
+    font-size: 24px;
+}
+.brand-contents > h1{
+    font-weight: var(--font-semibold);
+    font-size: 50px;
+}
+.brand-contents > p{
+    margin-top: 24px;
+    line-height: 150%;
+    font-weight: var(--font-regular);
+    color: #4B4B4B;
+}
+
+.brand-img-wrap {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+}
+.brand-img-item {
+    width: 220px;
+    height: 50%;
+
+    background-color: #F6F6F6;
+}
+.brand-img-model {
+    width: 510px;
+    height: 100%;
+    overflow: hidden;
+    background-color: gray;
+}
+
+
+
+
+
+/* item-menu-section */
+.item-menu-section{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.item-container{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 300px 300px;
+    gap: 20px;
+}
+.item-container > a > div{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background-color: #F6F6F6;
+}
+.item-container > a > div > .item-sub-text{
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: #424242b9;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.item-container a > div > .item-sub-text:hover{
+    transition: .2s;
+    opacity: 1;
+}
+.item-sub-text > .item-name{
+    font-size: 16px;
+    font-weight: var(--font-semibold);
+}
+.item-sub-text > .item-price{
+    font-size: 14px;
+}
+
+/* 버튼 */
+.btn-deliver-celeb-container {
+    width: 100%;
+    margin: 20px 0 0 60px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.btn-deliver-celeb-container > input{
+    display:none
+}
+input[name="item-menu"]:checked + label[name="item-menu"] {
+    color: #000;
+}
+.btn-deliver-celeb-container > label{
+    text-align: left;
+    font-weight: var(--font-semibold);
+    font-size: 30px;
+
+    color: #AFAFAF;
+}
+
+.btn-deliver-celeb-container > label:hover{
+    transition: .2s;
+    color: #4b4b4b;
+}
+
+
+
+
+/* banner 아래 contents */
+.contents-left,
+.contents-right{
+    width: 440px;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+}
+.contents-center {
+    display: flex;
+    flex-direction: column;
+
+    width: 340px;
+    margin: 0 30px;
+    overflow: hidden;
+}
+.contents-center-right{
+    width: 810px;
+    margin-left: 30px;
+    overflow: hidden;
+}
+.text-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.banner-under-section-container > section {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+}
+.banner-under-section-container h1 {
+    font-size: 40px;
+    font-weight: var(--font-regular);
+    margin-bottom: 50px;
+}
+.banner-under-section-container p {
+    line-height: 150%;
+    color: #4B4B4B;
+}
+
+.section-time > .contents-center {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.section-time > .contents-right {
+    height: 50%;
+}
+
+
+/* section-365 */
+.section-365 > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-365 .contents-center-right{
+    height: 55%;
+}
+
+
+/* section-cheer */
+.section-cheer > .contents-center{
+    height: 50%;
+}
+
+
+/* section-smile */
+.banner-under-section-container > .section-smile{
+    height: 420px;
+}
+
+
+/* section-kakao */
+.section-kakao > .contents-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-kakao > .contents-left > .img-box{
+    height: 40%;
+}
+.section-kakao > .contents-left > div{
+    display: flex;
+    flex-direction: column;
+}
+.section-kakao > .contents-right{
+    height: 50%;
+}

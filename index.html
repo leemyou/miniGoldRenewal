@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- header -->
     <header>
         <a href="#" class="btn-logo"><img src="./img/miniGold logo.svg" alt="logo"/></a>
         <ul class="menu-wrap">
@@ -26,6 +27,7 @@
         </div>
     </header>
 
+    <!-- 메인 배너 -->
     <div class="main-banner">
         <h1 class="back-text">PINK LAB DIAMOND</h1>
         <div class="item-wrap">
@@ -35,14 +37,239 @@
 
         <div class="next-btn-wrap">
             <div class="btn-wrap">
-                <button><ion-icon name="chevron-back-outline"></ion-icon></button>
-                <button><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                <button type="button"><ion-icon name="chevron-back-outline"></ion-icon></button>
+                <button type="button"><ion-icon name="chevron-forward-outline"></ion-icon></button>
             </div>
             <div>
-                
+                <!-- TODO: 네비게이션 바 들어가야함 -->
             </div>
         </div>
     </div>
+
+    <div class="main">
+        <!-- 브랜드 -->
+        <section class="brand mg-t-120">
+            <div class="brand-contents">
+                <h4>sinse 1978</h4>
+                <h1>BRNAD</h1>
+                <p>1978년 설립한 국내 최초 패션 주얼리 전문 브랜드
+                    미니골드는 19년 연속 업계 브랜드파워 1위를 달성하고, 
+                    지난 20년동안 제품의 개성화, 가격의 차별화, 
+                    디자인의 다양화를 통해 고객의 실질적인 만족을 추구해온 
+                    명실상부 국내 최고의 패션 주얼리 브랜드입니다.
+                </p>
+                <a href="#" id="btnMore">MORE<img src="./img/icon/arrow half.svg"/></a>
+            </div>
+            <div class="brand-img-wrap">
+                <div class="brand-img-item img-box br-20"><img class="img-in-box" src="./img/brand02.png" alt="상품"/></div>
+                <!-- TODO: 화질 올릴 것 -->
+                <div class="brand-img-model img-box br-20"><img class="img-in-box" src="./img/brand01.png" alt="모델 화보"/></div>
+            </div>
+        </section>
+
+        <section class="item-menu-section mg-t-120 mg-b-120">
+            <div class="item-container">
+                <a href="#진주목걸이">
+                    <div class="br-20">
+                        <img src="./img/delivery01.png">
+                        <div class="item-sub-text">
+                            <p class="item-name">14K 4mm 진주 비드 목걸이(스와)</p>
+                            <p class="item-price">89,800원</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#진주귀걸이">
+                    <div class="br-20">
+                        <img src="./img/delivery02.png">
+                        <div class="item-sub-text">
+                            <p class="item-name">베이직 진주 귀걸이8mm(스왈진주)</p>
+                            <p class="item-price">54,800원</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#하트귀걸이">
+                    <div class="br-20">
+                        <img src="./img/delivery03.png">
+                        <div class="item-sub-text">
+                            <p class="item-name">에벤 하트 귀걸이</p>
+                            <p class="item-price">89,800원</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="트리플큐귀걸이">
+                    <div class="br-20">
+                        <img src="./img/delivery04.png">
+                        <div class="item-sub-text">
+                            <p class="item-name">미니 트리플큐 귀걸이</p>
+                            <p class="item-price">99,800원</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- TODO: 이거 왜 고장나냐 -->
+            <div class="btn-deliver-celeb-container">
+                <input type="radio" name="item-menu" id="quickDelivery" checked/>
+                <input type="radio" name="item-menu" id="celeb"/>
+    
+                <label name="item-menu" for="quickDelivery">QUICK DELIVERY</label>
+                <label name="item-menu" for="celeb">CELEB</label>
+
+                <a href="#" id="btnMore">MORE<img src="./img/icon/arrow half.svg"/></a>
+            </div>
+        </section>
+    </div>
+
+    <!-- 서브 배너 -->
+    <div class="sub-banner">
+        <div class="main">
+            <div class="subbanner-img-wrap"><img src="img/subBanner.png"></div>
+            <div class="text-wrap">
+                <h1>사랑받는 데는 이유가 있어요</h1>
+                <p>소중한 사랑이 스며드는 로맨틱한 순간 언제나 함께 하고싶은 우리만의 커플링을 준비해요.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main banner-under-section-container mg-t-180 mg-b-460">
+        <!-- 달려온 시간을 응원하며 -->
+        <section class="section-time">
+            <div class="contents-left text-wrap">
+                <h1>달려온 시간을 응원하며</h1>
+                <p>올해 수고한 우리를 위해 기억될 시간을 선물해보세요. <br/>
+                    열심히 달려온 당신에게도, 감사한 분께도 <br/>
+                    더할나위 없이 좋은 선물이 될 거예요. <br/>
+                    한 해 동안 표현하지 못했던 마음을 시계로나마 대신해요.</p>
+                <a href="#" id="btnMore">MORE<img src="./img/icon/arrow half.svg"/></a>
+            </div>
+
+            <div class="contents-center img-box br-20">
+                <img src="./img/time01.png"/>
+            </div>
+
+            <div class="contents-right img-box br-20">
+                <img src="./img/time02.png"/>
+            </div>
+        </section>
+
+        <!-- 365일이 안 지겨운 아이템 -->
+        <section class="section-365 mg-t-120">
+            <div class="contents-left img-box br-20">
+                <img src="./img/daily01.png"/>
+            </div>
+
+            <div>
+                <div class="contents-center">
+                    <h1>365일이 안 지겨운 아이템</h1>
+                    <p>세상 귀찮거나 매우 바쁜 분들을 위해 매치하기 간편한 스타일링 추천!</p>
+                    <a href="#" id="btnMore">MORE<img src="./img/icon/arrow half.svg"/></a>
+                </div>
+    
+                <div class="contents-center-right img-box br-20">
+                    <img src="./img/daily02.png"/>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 소중한 당신을 응원해요 -->
+        <section class="section-cheer mg-t-120">
+            <div class="contents-left img-box br-20">
+                <img src="./img/cheer01.png" style="">
+            </div>
+
+            <div class="contents-center img-box br-20">
+                <img src="./img/cheer02.png"/>
+            </div>
+
+            <div class="contents-right">
+                <h1>소중한 당신을 응원해요</h1>
+                <p>세상에 하나 뿐인 나만의 천연 행운석 & 별자리원하는 모든 순간이 이루어질 Wish Moment</p>
+                <a href="#" id="btnMore">MORE<img src="./img/icon/arrow half.svg"/></a>
+            </div>
+        </section>
+
+        <!-- 웃으며 삽시다! -->
+        <section class="section-smile mg-t-120">
+            <div class="contents-left">
+                <h1>웃으며 삽시다!</h1>
+                <p>당신의 매일에 행운을 보탤게요늘 웃음만 가득할 수 있도록 행운 주얼리와 함께하세요</p>
+                <a href="#" id="btnMore">MORE<img src="./img/icon/arrow half.svg"/></a>
+            </div>
+
+            <div class="contents-center-right img-box br-20">
+                <img src="./img/smile01.png">
+            </div>
+        </section>
+
+        <!-- 카카오 프렌즈 x 미니골드 -->
+        <section class="section-kakao mg-t-120">
+            <div class="contents-left">
+                <div>
+                    <h1>카카오 프렌즈 x 미니골드</h1>
+                    <p>[24K 순금] <br/>오직 미니골드에서만 카카오 프렌즈 콜라보레이션카카오 프렌즈 24K 순금 주얼리로 가치를 더해보세요.</p>
+                    <a href="#" id="btnMore">MORE<img src="./img/icon/arrow half.svg"/></a>
+                </div>
+                <div class="img-box">
+                    <img src="./img/kakao01.png" class="br-20" style="background-position: top;"/>
+                </div>
+            </div>
+
+            <div class="contents-center img-box br-20">
+                <img src="./img/kakao02.png"/>
+            </div>
+
+            <div class="contents-right img-box br-20">
+                <img src="./img/kakao03.png"/>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-top-left">
+                <p>miniGOLD</p>
+                <ul>
+                    <li><a href="#"><ion-icon name="logo-facebook" ></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                </ul>
+            </div>
+            <div class="footer-top-right">
+                <div class="footer-contents-wrap">
+                    <h3>CONTACT US</h3>
+                    <ul>
+                        <li><p>cs@honkorea.com</p></li>
+                        <li><p>서울 관악구 남부순환료 1676 (신림동)</p></li>
+                        <li><p>080-356-0123</p></li>
+                    </ul>
+                </div>
+                <div class="footer-contents-wrap">
+                    <h3>SC CENTER</h3>
+                    <ul>
+                        <li><p>AM 10:00 ~ PM 05:00</p></li>
+                        <li><p>Off-time PM 12:00 ~ PM 01:00</p></li>
+                        <li><p>DAY OFF(SATURDAY, SUNDAY, HOLIDAY)</p></li>
+                    </ul>
+                </div>
+                <div class="footer-contents-wrap">
+                    <h3>ABOUT</h3>
+                    <ul class="about-wrap">
+                        <li><a href="#"><p>HONCOMPANY</p></a></li>
+                        <li><a href="#"><p>매장찾기</p></a></li>
+                        <li><a href="#"><p>고객센터</p></a></li>
+                        <li><a href="#"><p>이용약관</p></a></li>
+                        <li><a href="#"><p>개인정보취급방침</p></a></li>
+                        <li><a href="#"><p>가맹문의</p></a></li>
+                        <li><a href="#"><p>재휴문의</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright 2015 miniGOLD ALL RIGHTS RESERVED</p>
+            <p>미니골드 쇼핑몰에 진열된 이미지. 컨텐츠를 스크러치 복사 이동하여 상업적 용도로 사용할 수 없습니다.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
