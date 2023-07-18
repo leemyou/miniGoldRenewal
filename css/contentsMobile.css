@@ -1,0 +1,11 @@
+@media (max-width: 1280px) {
+    .main{
+        background-color: red;
+        width: 900px;
+    }
+
+    .brand{
+        height: 500px;
+    }
+
+}

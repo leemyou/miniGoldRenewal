@@ -20,6 +20,9 @@ header {
     display: flex;
     gap: 0 12px;
 }
+.menu-wrap a {
+    font-size: 1.6rem;
+}
 
 .icon-wrap > a {
     width: 40px;

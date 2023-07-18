@@ -25,11 +25,13 @@
     font-weight: var(--font-bold);
     color: #fff;
     z-index: 1;
+    font-size: 4rem;
 }
 .sub-banner > .main > .text-wrap > p{
     color: #AA5E5E;
     max-width: 380px;
     z-index: 1;
+    font-size: 2rem;
 }
 
 .sub-banner > .main > .subbanner-img-wrap {
