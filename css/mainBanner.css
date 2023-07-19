@@ -1,7 +1,7 @@
 .main-banner {
     width: 100%;
     height: 100vh;
-    background-color: var(--color-pink);
+    background-color: var(--color-light-blue);
     position: relative;
 }
 
@@ -16,6 +16,14 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-banner > .item-wrap > img {
+    width: 100%;
+    height: 100%;
 }
 
 .main-banner > h1 {
@@ -37,7 +45,7 @@
 
     position: absolute;
     bottom: 200px;
-    left: 50%;
+    left: 55%;
     z-index: 100;
 }
 
@@ -57,20 +65,33 @@
     display: flex;
     justify-content: space-between;
 }
-.next-btn-wrap > .btn-wrap > button{
+.next-btn-wrap > .btn-wrap > .swiper-btn{
     width: 50px;
     height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     border: none;
     border-radius: 50%;
     
     background-color: rgb(255, 255, 255, 0.3);
 }
-.next-btn-wrap > .btn-wrap > button > ion-icon{
+.next-btn-wrap > .btn-wrap > .swiper-btn > ion-icon{
     font-size: 20px;
     color: #fff;
 }
-.next-btn-wrap > .btn-wrap > button:hover{
+.next-btn-wrap > .btn-wrap > .swiper-btn:hover{
     background-color: rgb(255, 255, 255, 0.5);
     transition: .2s;
 }
+
+
+
+
+/* test */
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
