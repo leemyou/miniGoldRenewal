@@ -31,7 +31,7 @@ const swiper = new Swiper('.swiper', {
   window.onload = function () {
     $('.test')[0].innerHTML = '123';
 
-    console.log("hi");
+    console.log($(".swiper-slide-active").val());
     
 
 }

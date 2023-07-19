@@ -21,21 +21,45 @@
 </head>
 <body>
     <!-- header -->
-    <header>
-        <a href="#" class="btn-logo"><img src="./img/miniGold logo.svg" alt="logo"/></a>
-        <ul class="menu-wrap">
-            <li><a href="##">INFO</a></li>
-            <li><a href="##">HELP</a></li>
-            <li><a href="##">PRODUCT</a></li>
-            <li><a href="##">EVENT</a></li>
-            <li><a href="##">REVIEW</a></li>
-        </ul>
-        <div class="icon-wrap">
-            <a href="#"><img src="./img/icon/Profile.svg" alt="프로필 버튼"/></a>
-            <a href="#"><img src="./img/icon/Search.svg" alt="검색버튼"/></a>
-            <a href="#"><img src="./img/icon/Shopping Bag.svg" alt="장바구니 버튼"/></a>
+    <nav>
+        <div class="globalnav-menu">
+            <a href="#" class="btn-logo"><img src="./img/miniGold logo.svg" alt="logo"/></a>
+            <ul class="menu-wrap">
+                <li><a href="##">INFO</a>
+                    <div class="sub-menu">
+                        <a href="#none">Store Info</a>
+                        <a href="#none">Brand</a>
+                        <a href="#none">Philosophy</a>
+                        <a href="#none">Retail Location</a>
+                        <a href="#none">Partner</a>
+                        <a href="#none">Collaboration</a>
+                    </div>
+                </li>
+                <li><a href="##">HELP</a></li>
+                <li><a href="##">PRODUCT</a>
+                    <div class="sub-menu">
+                        <a href="#none">All</a>
+                        <a href="#none">Quick Delivery</a>
+                        <a href="#none">New</a>
+                        <a href="#none">Best</a>
+                        <a href="#none">mini Alone</a>
+                        <a href="#none">Collection</a>
+                        <a href="#none">Wristwatch</a>
+                        <a href="#none">Ring</a>
+                        <a href="#none">Necklace</a>
+                    </div>
+                </li>
+                <li><a href="##">EVENT</a></li>
+                <li><a href="##">REVIEW</a></li>
+            </ul>
+            <div class="icon-wrap">
+                <a href="#"><img src="./img/icon/Profile.svg" alt="프로필 버튼"/></a>
+                <a href="#"><img src="./img/icon/Search.svg" alt="검색버튼"/></a>
+                <a href="#"><img src="./img/icon/Shopping Bag.svg" alt="장바구니 버튼"/></a>
+            </div>
         </div>
-    </header>
+    </nav>
+    <div class="globalnav-curtain"></div> <!-- TODO: 활성화되면 스크롤 방지 넣어야함-->
 
     <!-- 메인 배너 -->
     <div class="main-banner">
@@ -58,24 +82,22 @@
     </div>
 
     <!-- Slider main container -->
-<div class="swiper">
-    <!-- Additional required wrapper -->
+<!-- <div class="swiper">
+    Additional required wrapper
     <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
+      Slides
+      <div class="swiper-slide" id="01">Slide 1</div>
+      <div class="swiper-slide" id="02">Slide 2</div>
+      <div class="swiper-slide" id="03">Slide 3</div>
       ...
     </div>
-    <!-- If we need pagination -->
+    pagination
     <div class="swiper-pagination"></div>
   
-    <!-- If we need navigation buttons -->
+    navigation buttons
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
-  
-  </div>
-  <div><p class="test">test</p></div>
+  </div> -->
 
     <div class="main">
         <!-- 브랜드 -->
