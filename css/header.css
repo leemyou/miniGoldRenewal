@@ -1,4 +1,15 @@
-/* header style */
+/* navibar style */
+
+.white-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    z-index: 999;    
+    background-color: #fff;
+    display: none;
+}
 
 .globalnav-menu {
     width: 100%;
@@ -20,16 +31,36 @@
 .menu-wrap {
     display: flex;
     gap: 0 12px;
-}
-.menu-wrap li{
-    display: flex;
-    flex-direction: row;
 
-    align-items: center;
-    background-color: red;
 }
-.menu-wrap .sub-menu{
-    /* display: none; */
+.menu-wrap > li{
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+.menu-wrap > li > .sub-menu{
+
+    display: none;
+}
+.menu-wrap > li > .sub-menu .sub-menu-wrap{
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+
+    margin: 60px 0 0 0;
+
+    position: absolute;
+    white-space: nowrap;
+
+}
+.menu-wrap > li > a{
+    border-bottom: 2px solid transparent;
+}
+.menu-wrap > li > a:hover {
+    color: #F6CA2A;
+    border-color:#F6CA2A;
 }
 .menu-wrap a {
     font-size: 1.6rem;
@@ -66,9 +97,9 @@
 
 /* 메뉴바 아래 흐린 흰색 배경 */
 .globalnav-curtain {
+    /* opacity: 0; */
     width: 100%;
     height: 100vh;
-    /* background-color: rgba(228, 228, 228, 0.4); */
     backdrop-filter:blur(10px) ;
 
     position: fixed;
