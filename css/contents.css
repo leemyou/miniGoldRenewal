@@ -130,23 +130,23 @@
     flex-direction: column;
     gap: 10px;
 }
-.btn-deliver-celeb-container > input{
-    display:none
-}
-input[name="item-menu"]:checked + label[name="item-menu"] {
-    color: #000;
-}
-.btn-deliver-celeb-container > label{
+.btn-deliver-celeb{
     text-align: left;
     font-weight: var(--font-semibold);
     font-size: 3rem;
 
     color: #AFAFAF;
-}
+    border: none;
+    background-color: transparent;
 
-.btn-deliver-celeb-container > label:hover{
+    cursor: pointer;
+}
+.btn-deliver-celeb:hover{
     transition: .2s;
-    color: #4b4b4b;
+    color: #6e6e6e;
+}
+.btn-deliver-celeb.active {
+    color: #000;
 }
 
 

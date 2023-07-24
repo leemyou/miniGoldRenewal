@@ -10,7 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./js/navigationBar.js" type="text/javascript"></script>
+    <script src="./js/jQuery.js" type="text/javascript"></script>
     <!-- <script src="./js/mainBanner.js" type="module"></script> -->
     <!-- swiper -->
     <!-- <link
@@ -22,41 +22,39 @@
     <title>miniGOLD Renewal</title>
 </head>
 <body>
+    <div id="globalnav-curtain" class="globalnav-curtain"></div> <!-- TODO: 활성화되면 스크롤 방지 넣어야함-->
     <div class="white-box"></div>
-
     <!-- navigation bar -->
     <nav>
         <div class="globalnav-menu">
             <a href="#" class="btn-logo"><img src="./img/miniGold logo.svg" alt="logo"/></a>
             <ul class="menu-wrap">
-                <li><a href="##">INFO</a>
-                    <div class="sub-menu">
-                        <div class="sub-menu-wrap">
-
-                            <a href="#none">Store Info</a>
-                            <a href="#none">Brand</a>
-                            <a href="#none">Philosophy</a>
-                            <a href="#none">Retail Location</a>
-                            <a href="#none">Partner</a>
-                            <a href="#none">Collaboration</a>
-                        </div>
-
+                <li><a href="##">INFO <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="sub-menu animated fadeInDown">
+                        <ul class="sub-menu-wrap">
+                            <li><a href="#none">Store Info</a></li>
+                            <li><a href="#none">Brand</a></li>
+                            <li><a href="#none">Philosophy</a></li>
+                            <li><a href="#none">Retail Location</a></li>
+                            <li><a href="#none">Partner</a></li>
+                            <li><a href="#none">Collaboration</a></li>
+                        </ul>
                     </div>
                 </li>
                 <li><a href="##">HELP</a></li>
-                <li><a href="##">PRODUCT</a>
-                    <div class="sub-menu">
-                        <div class="sub-menu-wrap">
-                            <a href="#none">All</a>
-                            <a href="#none">Quick Delivery</a>
-                            <a href="#none">New</a>
-                            <a href="#none">Best</a>
-                            <a href="#none">mini Alone</a>
-                            <a href="#none">Collection</a>
-                            <a href="#none">Wristwatch</a>
-                            <a href="#none">Ring</a>
-                            <a href="#none">Necklace</a>
-                        </div>
+                <li><a href="##">PRODUCT <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="sub-menu animated fadeInDown">
+                        <ul class="sub-menu-wrap">
+                            <li><a href="#none">All</a></li>
+                            <li><a href="#none">Quick Delivery</a></li>
+                            <li><a href="#none">New</a></li>
+                            <li><a href="#none">Best</a></li>
+                            <li><a href="#none">mini Alone</a></li>
+                            <li><a href="#none">Collection</a></li>
+                            <li><a href="#none">Wristwatch</a></li>
+                            <li><a href="#none">Ring</a></li>
+                            <li><a href="#none">Necklace</a></li>
+                        </ul>
                     </div>
                 </li>
                 <li><a href="##">EVENT</a></li>
@@ -69,7 +67,6 @@
             </div>
         </div>
     </nav>
-    <div id="globalnav-curtain" class="globalnav-curtain"></div> <!-- TODO: 활성화되면 스크롤 방지 넣어야함-->
 
     <!-- 메인 배너 -->
     <div class="main-banner">
@@ -159,7 +156,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="트리플큐귀걸이">
+                <a href="#트리플큐귀걸이">
                     <div class="br-20">
                         <img src="./img/delivery04.png">
                         <div class="item-sub-text">
@@ -172,11 +169,8 @@
 
             <!-- TODO: 이거 왜 고장나냐 -->
             <div class="btn-deliver-celeb-container">
-                <input type="radio" name="item-menu" id="quickDelivery" checked/>
-                <input type="radio" name="item-menu" id="celeb"/>
-    
-                <label name="item-menu" for="quickDelivery">QUICK DELIVERY</label>
-                <label name="item-menu" for="celeb">CELEB</label>
+                <button id="btnDeliver" class="btn-deliver-celeb active">QUICK DELIVERY</button>
+                <button id="btnCeleb" class="btn-deliver-celeb">CELEB</button>
 
                 <a href="#" id="btnMore">MORE<img src="./img/icon/arrow half.svg"/></a>
             </div>
