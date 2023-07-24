@@ -1,18 +1,31 @@
-$(document).ready(function(){
+$(function(){
 
   // 네비게이션 바
   $('.menu-wrap > li').mouseenter(function(){
-      if($(this).children().hasClass("sub-menu")) {
-        $(this).children(".sub-menu").addClass("go");
-        $('.white-box').slideDown(300).addClass( "active" );
-        $('#globalnav-curtain').css('opacity', 1);
-      }else{
-        $(".menu-wrap").children("*").removeClass("go");
-        $(this).children(".sub-menu").css('opacity', 0);
-        $('.white-box').stop().slideUp(300).removeClass( "active" );
-        $('#globalnav-curtain').css('opacity', 0);
-      }
-    });
+    if($(this).children().hasClass("sub-menu")) {   // 서브메뉴가 존재한다면,
+      $(this).stop().children(".sub-menu").animate({
+        height: 'show', 
+        width:'100%', 
+        opacity:"show"
+      }, 300)
+      $(this).stop().children(".sub-menu").fadeIn(500);
+      $('#globalnav-curtain').fadeIn();
+    }
+    else{   // 서브메뉴가 없다면,
+      $('#globalnav-curtain').fadeOut();
+    }
+  });
+
+  $('.sub-menu').mouseleave(function(){
+    $(this).stop().animate({
+      height: 'hide',
+      width:'100%', 
+      opacity:"show"
+    }, 300);
+    $(this).stop().fadeOut(300);
+    $('#globalnav-curtain').stop().fadeOut();
+  })
+
     // $('.menu-wrap > li').mouseleave(function(){
     //   $(this).stop();
     //   $(this).children(".sub-menu").removeClass( "go" );
@@ -20,17 +33,9 @@ $(document).ready(function(){
     //   $('#globalnav-curtain').css('opacity', 0);
     // });
 
-    $('.white-box').mouseenter(function(){
-      $(this).css('display', block);
-    });
-    $('.white-box').mouseleave(function(){
-      $('.sub-menu').removeClass( "go" );
-      $('.white-box').stop().slideUp(300).removeClass( "active" );
-      $('#globalnav-curtain').css('opacity', 0);
-    });
 
 
-    
+
 
     // deliver-celeb
 

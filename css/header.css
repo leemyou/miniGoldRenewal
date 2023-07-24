@@ -1,19 +1,8 @@
 /* navibar style */
 
-.white-box {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh;
-    z-index: 999;    
-    background-color: #fff;
-    display: none;
-}
-
 .globalnav-menu {
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     align-items: center;
@@ -25,45 +14,62 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 900;
+}
+
+/* 로고 */
+.globalnav-menu > a{
+    z-index: 10;
+}
+/* 아이콘 */
+.btn-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
 }
 
 .menu-wrap {
     display: flex;
-    gap: 0 12px;
+    gap: 0 20px;
 
+    height: 100%;
 }
 .menu-wrap > li{
     display: flex;
     flex-direction: column;
 
-    position: relative;
+    /* position: relative; */
+    height: 100%;
 }
-.menu-wrap > li > .sub-menu{
 
-    display: none;
-}
-.menu-wrap > li > .sub-menu .sub-menu-wrap{
-    background-color: yellow;
-    display: flex;
-    flex-direction: column;
-    gap: 20px 0;
-
-    margin: 60px 0 0 0;
-
-    position: absolute;
-    white-space: nowrap;
-
-}
 .menu-wrap > li > a{
-    border-bottom: 2px solid transparent;
-}
-.menu-wrap > li > a:hover {
-    color: #F6CA2A;
-    border-color:#F6CA2A;
-}
-.menu-wrap a {
+    position: relative;
+    text-transform: uppercase;
     font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    z-index: 10;
+}
+.menu-wrap > li > a::before{
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 2px;
+    background-color: #F6CA2A;
+    transform: scaleX(0);
+    transition:transform .25s ease-in-out;
+    transform-origin: right;
+    
+}
+.menu-wrap > li > a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .icon-wrap > a {
@@ -73,34 +79,72 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
 .icon-wrap{
     display: flex;
-    gap: 0 10px
+    gap: 0 10px;
 }
 
 
-/* header 메뉴 */
-.globalnav-items {
-    width: 100%;
+/* sub-menu */
+.sub-menu{
     background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 18rem;
+
+    padding: 80px 120px 60px 120px;
+    box-sizing: content-box;
 
     position: fixed;
-    z-index: 900;
-    padding: 100px 0 40px 150px;
-    box-shadow: 0px 0px 30px 15px #e9e9e9;
-    outline: 10px;
+
+    display: none;
+    /* opacity: 0; */
 }
-
-
-
+.sub-menu.go { 
+    display: flex;
+    -webkit-animation-name: fadeInDown; 
+    animation-name: fadeInDown; 
+}
+.sub-menu > ul{
+    display: flex;
+    gap: 0 80px;
+}
+.sub-menu > ul > li{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.sub-menu > ul > li:not(:first-child){
+    gap: 10px;
+}
+.sub-menu > ul > li > p{
+    font-size: 1.2rem;
+    color: #9e9e9e;
+    margin-bottom: 5px;
+}
+.sub-menu > ul > li > a{
+    font-size: 2.3rem;
+    font-weight: var(--font-bold);
+}
+.sub-menu > ul > li:not(:first-child) > a{
+    font-size: 1.4rem;
+    font-weight: var(--font-regular);
+}
+.sub-menu-wrap{
+    position: absolute;
+}
 
 /* 메뉴바 아래 흐린 흰색 배경 */
 .globalnav-curtain {
+    display: none;
     /* opacity: 0; */
     width: 100%;
     height: 100vh;
     backdrop-filter:blur(10px) ;
+    /* transition: all 0.2s ease-in-out; */
 
     position: fixed;
     top: 0;
