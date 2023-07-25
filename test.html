@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<!-- 링크 : https://swiperjs.com/demos -->
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-slide.banner1 {
+    background-color: #BAD5E6;
+    }
+    .swiper-slide.banner2 {
+        background-color: #EDC2BF;
+    }
+    .swiper-slide.banner3 {
+        background-color: #FFD68D;
+    }
+
+    .swiper-slide .item-wrap {
+    width: 630px;
+    height: 630px;
+    background-color: #E9F3F4;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+.swiper-slide .item-wrap.item1 {
+    background-image: url("../img/mainBanner01.png");
+}
+.swiper-slide .item-wrap.item2 {
+    background-image: url("../img/mainBanner02.png");
+}
+.swiper-slide .item-wrap.item3 {
+    background-image: url("../img/mainBanner03.png");
+}
+
+.swiper-slide .item-container > .btn-more-wrap{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-left: 200px;
+    
+    z-index: 99;
+
+    display: flex;
+    gap: 14px;
+
+}
+.swiper-slide > .item-container > .btn-more-wrap > a{
+    background-color: rgba(79, 150, 194, 0.50);
+    backdrop-filter: blur(2px);
+    font-size: 1.4rem;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    color: #fff;
+}
+.swiper-slide > .item-container > .btn-more-wrap > p{
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: #fff;
+
+    margin-top: -20px;
+}
+.swiper-slide.swiper-slide-active > .item-container > .btn-more-wrap > p{
+    animation: text 1s .5s both;
+}
+
+.swiper-slide > h1 {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
+}
+.swiper-slide.swiper-slide-active > h1 {
+    animation: text 1s .2s both;
+}
+
+.swiper-slide > .back-text {
+    width: 640px;
+    font-size: 135px;
+
+    position: absolute;
+    top: 130px;         /*TODO: 여기 top값 반응형 할 때 수정좀*/
+    right: 50%;
+}
+.swiper-slide > .front-text { 
+    max-width: 480px;
+    font-size:100px;
+
+    position: absolute;
+    bottom: 200px;
+    left: 55%;
+    z-index: 100;
+}
+
+@keyframes text {
+    0% { opacity: 0; transform: translateY(30px);}
+    100% { opacity:1; transform: translateY(0);}
+}
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide banner1">
+        <h1 class="back-text">BLUE LAB DIAMOND</h1>
+        <div class="item-container">
+            <div class="item-wrap item1"></div>
+            <div class="btn-more-wrap">
+                <a href="#">VIEW MORE<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                <p>매 순간 빛나는<br/>우리 안의 블루를 찾아보세요</p>
+            </div>
+        </div>
+        <h1 class="front-text">RIVIERA</h1>
+      </div>
+      <div class="swiper-slide banner2">
+        <h1 class="back-text">BLUE LAB DIAMOND</h1>
+        <div class="item-container">
+            <div class="item-wrap item2"></div>
+            <div class="btn-more-wrap">
+                <a href="#">VIEW MORE<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                <p>매 순간 빛나는<br/>우리 안의 블루를 찾아보세요</p>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide banner3">
+        <h1 class="back-text">BLUE LAB DIAMOND</h1>
+        <div class="item-container">
+            <div class="item-wrap item3"></div>
+            <div class="btn-more-wrap">
+                <a href="#">VIEW MORE<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                <p>매 순간 빛나는<br/>우리 안의 블루를 찾아보세요</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</body>
+
+</html>
