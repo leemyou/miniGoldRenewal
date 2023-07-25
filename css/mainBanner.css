@@ -1,14 +1,25 @@
-.main-banner {
+.swiper-slide {
     width: 100%;
     height: 100vh;
-    background-color: var(--color-light-blue);
     position: relative;
 }
+.swiper-slide.banner1 {
+    background-color: var(--color-light-blue);
+}
+.swiper-slide.banner2 {
+    background-color: var(--color-pink);
+}
+.swiper-slide.banner3 {
+    background-color: #FFD68D;
+}
 
-.main-banner .item-wrap {
+
+.swiper-slide .item-wrap {
     width: 630px;
     height: 630px;
     background-color: #E9F3F4;
+    background-position: center;
+    background-size: contain;
     border-radius: 50%;
 
     position: absolute;
@@ -16,16 +27,22 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-.main-banner .item-wrap > img {
+.swiper-slide .item-wrap.item1 {
+    background-image: url("../img/mainBanner01.png");
+}
+.swiper-slide .item-wrap.item2 {
+    background-image: url("../img/mainBanner02.png");
+}
+.swiper-slide .item-wrap.item3 {
+    background-image: url("../img/mainBanner03.png");
+}
+
+.swiper-slide .item-wrap > img {
     width: 100%;
     height: 100%;
 }
-.main-banner .item-container > .btn-more-wrap{
+.swiper-slide .item-container > .btn-more-wrap{
     position: absolute;
     top: 25%;
     left: 50%;
@@ -37,7 +54,7 @@
     gap: 14px;
 
 }
-.main-banner > .item-container > .btn-more-wrap > a{
+.swiper-slide > .item-container > .btn-more-wrap > a{
     background-color: rgba(79, 150, 194, 0.50);
     backdrop-filter: blur(2px);
     font-size: 1.4rem;
@@ -51,20 +68,26 @@
     border: 1.5px solid #fff;
     color: #fff;
 }
-.main-banner > .item-container > .btn-more-wrap > p{
+.swiper-slide > .item-container > .btn-more-wrap > p{
     font-size: 1.8rem;
     line-height: 150%;
     color: #fff;
 
     margin-top: -20px;
 }
+.swiper-slide.swiper-slide-active > .item-container > .btn-more-wrap > p{
+    animation: text 1s .5s both;
+}
 
-.main-banner > h1 {
+.swiper-slide > h1 {
     font-weight: bold;
     color: rgba(255, 255, 255, 0.5);
 }
+.swiper-slide.swiper-slide-active > h1 {
+    animation: text 1s .2s both;
+}
 
-.main-banner > .back-text {
+.swiper-slide > .back-text {
     width: 640px;
     font-size: 135px;
 
@@ -72,7 +95,7 @@
     top: 130px;         /*TODO: 여기 top값 반응형 할 때 수정좀*/
     right: 50%;
 }
-.main-banner > .front-text { 
+.swiper-slide > .front-text { 
     max-width: 480px;
     font-size:100px;
 
@@ -89,8 +112,6 @@
     position: absolute;
     left: 160px;
     bottom: 160px;
-    
-    /* background-color: red; */
 }
 
 .next-btn-wrap > .btn-wrap{
@@ -122,9 +143,13 @@
 
 
 
+@keyframes text {
+    0% { opacity: 0; transform: translateY(30px);}
+    100% { opacity:1; transform: translateY(0);}
+}
 
-/* test */
-.swiper {
-    width: 600px;
-    height: 300px;
-  }
+
+
+/* .swiper-button-next, .swiper-button-prev {
+    background-color: red;
+} */

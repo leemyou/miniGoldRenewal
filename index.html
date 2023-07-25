@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <!-- ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./js/jQuery.js" type="text/javascript"></script>
-    <!-- <script src="./js/mainBanner.js" type="module"></script> -->
+
     <!-- swiper -->
     <!-- <link
       rel="stylesheet"
@@ -81,27 +79,55 @@
 
 
     <!-- 메인 배너 -->
-    <div class="main-banner">
-        <h1 class="back-text">BLUE LAB DIAMOND</h1>
-        <div class="item-container">
-            <div class="item-wrap"><img src="./img/mainBanner01.png" alt='blue lab diamond RIVIERA'/></div>
-            <div class="btn-more-wrap">
-                <a href="#">VIEW MORE<ion-icon name="chevron-forward-outline"></ion-icon></a>
-                <p>매 순간 빛나는<br/>우리 안의 블루를 찾아보세요</p>
+    <div class="swiper-container slider mySwiper" pagination="true">
+        <div class="swiper-slide banner1">
+            <h1 class="back-text">BLUE LAB DIAMOND</h1>
+            <div class="item-container">
+                <div class="item-wrap item1"></div>
+                <div class="btn-more-wrap">
+                    <a href="#">VIEW MORE<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                    <p>매 순간 빛나는<br/>우리 안의 블루를 찾아보세요</p>
+                </div>
             </div>
-        </div>
-        <h1 class="front-text">RIVIERA</h1>
-
-        <div class="next-btn-wrap">
-            <div class="btn-wrap">
-                <div class="swiper-btn swiper-btn-next"><ion-icon name="chevron-back-outline"></ion-icon></div>
-                <div class="swiper-btn swiper-btn-prev"><ion-icon name="chevron-forward-outline"></ion-icon></div>
-            </div>
-            <div>
-                <!-- TODO: 네비게이션 바 들어가야함 -->
+            <h1 class="front-text">RIVIERA</h1>
+    
+            <div class="next-btn-wrap">
+                <div class="btn-wrap">
+                    <div class="swiper-btn swiper-btn-next"><ion-icon name="chevron-back-outline"></ion-icon></div>
+                    <div class="swiper-btn swiper-btn-prev"><ion-icon name="chevron-forward-outline"></ion-icon></div>
+                </div>
+                <div>
+                    <!-- TODO: 네비게이션 바 들어가야함 -->
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+    <!-- <div class="swiper-container slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg1">
+             <span>Chemicals</span>
+             <p>Value that Creates</p>
+             <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<br>tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+    </div> -->
 
     <!-- Slider main container -->
 <!-- <div class="swiper">
@@ -343,5 +369,23 @@
         </div>
     </footer>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- <script src="./js/swiper.js" type="module"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="./js/jQuery.js" type="text/javascript"></script>
 </body>
 </html>

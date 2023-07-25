@@ -26,12 +26,15 @@ $(function(){
     $('#globalnav-curtain').stop().fadeOut();
   })
 
-    // $('.menu-wrap > li').mouseleave(function(){
-    //   $(this).stop();
-    //   $(this).children(".sub-menu").removeClass( "go" );
-    //   $('.white-box').slideUp().removeClass( "active" );
-    //   $('#globalnav-curtain').css('opacity', 0);
-    // });
+
+  // swiper
+  // main Banner
+  // $(document).ready(function(){
+  //   var swiper = new Swiper('.swiper-container',{
+  //     effect:'fade',
+  //     loop:true
+  //   });
+  // });
 
 
 
@@ -63,7 +66,6 @@ $(function(){
 
       // 글자 변경
       $.getJSON('../documents/deliver-celeb-items-list.json', function(data){
-        console.log(data[thisBtn])
         $.each(deliver_celeb_items, function(i, el){
           $(this).find('.item-name').text(data[thisBtn][i].name)
           $(this).find('.item-price').text(`${data[thisBtn][i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원`)
