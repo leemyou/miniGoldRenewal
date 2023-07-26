@@ -1,6 +1,5 @@
 var mainSwiper = new Swiper(".mySwiper", {
   // 필요없는 요소 삭제
-  spaceBetween: 30,
   effect: "fade",
   loop: true,
   navigation: {
@@ -17,9 +16,11 @@ var mainSwiper = new Swiper(".mySwiper", {
 });
 
 var pagingSwiper = new Swiper('.mySwiper', {
+  effect: 'fade',
+  loop: true,
   pagination: {
 		el: ".pagination-basic",
-    type: 'bullets',
+    // type: 'bullets',
     clickable: true,    //버튼 클릭 여부
 	},
 })
@@ -29,5 +30,5 @@ mainSwiper.controller.control = pagingSwiper;
 pagingSwiper.controller.control = mainSwiper;
 
 // pagination에서 필요없는 요소 삭제
-const slash = document.getElementById('swiperPagination')
+const slash = document.getElementById('swiperPaginationNum')
 slash.innerHTML='<span class="swiper-pagination-current">01</span>'
