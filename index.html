@@ -79,73 +79,53 @@
 
 
     <!-- 메인 배너 -->
-    <div class="swiper-container slider mySwiper" pagination="true">
-        <div class="swiper-slide banner1">
-            <h1 class="back-text">BLUE LAB DIAMOND</h1>
-            <div class="item-container">
-                <div class="item-wrap item1"></div>
-                <div class="btn-more-wrap">
-                    <a href="#">VIEW MORE<ion-icon name="chevron-forward-outline"></ion-icon></a>
-                    <p>매 순간 빛나는<br/>우리 안의 블루를 찾아보세요</p>
-                </div>
-            </div>
-            <h1 class="front-text">RIVIERA</h1>
-    
-            <div class="next-btn-wrap">
-                <div class="btn-wrap">
-                    <div class="swiper-btn swiper-btn-next"><ion-icon name="chevron-back-outline"></ion-icon></div>
-                    <div class="swiper-btn swiper-btn-prev"><ion-icon name="chevron-forward-outline"></ion-icon></div>
-                </div>
-                <div>
-                    <!-- TODO: 네비게이션 바 들어가야함 -->
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide banner1">
+                <h1 class="back-text">BLUE LAB DIAMOND</h1>
+                <div class="item-container">
+                    <div class="item-wrap item1"></div>
+                    <div class="btn-more-wrap">
+                        <a href="#" class="btn1">VIEW MORE<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                        <p>매 순간 빛나는<br/>우리 안의 블루를 찾아보세요</p>
+                    </div>
+                </div>
+                <h1 class="front-text">RIVIERA</h1>
+            </div>
+            <div class="swiper-slide banner2">
+                <h1 class="back-text">PINK LAB DIAMOND</h1>
+                <div class="item-container">
+                    <div class="item-wrap item2"></div>
+                    <div class="btn-more-wrap">
+                        <a href="#" class="btn2">VIEW MORE<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                        <p>핑크빛 기적으로<br/>마음을 표현하세요</p>
+                    </div>
+                </div>
+                <h1 class="front-text">PINK LAB DIAMOND</h1>
+            </div>
+            <div class="swiper-slide banner3">
+                <h1 class="back-text">24k GOLD JEWELRY</h1>
+                <div class="item-container">
+                    <div class="item-wrap item3"></div>
+                    <div class="btn-more-wrap">
+                        <a href="#" class="btn3">VIEW MORE<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                        <p>현명한 소비의 지름길 24k 순금<br/>가치있는 선택</p>
+                    </div>
+                </div>
+                <h1 class="front-text">24k GOLD JEWELRY</h1>
+            </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-
-    <!-- <div class="swiper-container slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide bg1">
-             <span>Chemicals</span>
-             <p>Value that Creates</p>
-             <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<br>tempor incididunt ut labore et dolore magna aliqua.</div>
-          </div>
+        <div class="swiper-btn-container" >
+            <div class="swiper-btn-wrap">
+                <button class="swiper-btn swiper-btn-prev" name="prev"><ion-icon name="chevron-back-outline"></ion-icon></button>
+                <button class="swiper-btn swiper-btn-next" name="next"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+            </div>
+            <div class="swiper-pagination-wrap">
+                <h1>01</h1>
+                <div id="swiperPagination" class="swiper-pagination"></div>
+            </div>
         </div>
-    </div> -->
-
-    <!-- Slider main container -->
-<!-- <div class="swiper">
-    Additional required wrapper
-    <div class="swiper-wrapper">
-      Slides
-      <div class="swiper-slide" id="01">Slide 1</div>
-      <div class="swiper-slide" id="02">Slide 2</div>
-      <div class="swiper-slide" id="03">Slide 3</div>
-      ...
     </div>
-    pagination
-    <div class="swiper-pagination"></div>
-  
-    navigation buttons
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div> -->
 
     <div class="main">
         <!-- 브랜드 -->
@@ -371,21 +351,9 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <!-- <script src="./js/swiper.js" type="module"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
-    <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
     <script src="./js/jQuery.js" type="text/javascript"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
 </body>
 </html>
