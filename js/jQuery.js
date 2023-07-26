@@ -1,6 +1,7 @@
 $(function(){
 
   // 네비게이션 바
+  // 메뉴
   $('.menu-wrap > li').mouseenter(function(){
     if($(this).children().hasClass("sub-menu")) {   // 서브메뉴가 존재한다면,
       $(this).stop().children(".sub-menu").animate({
@@ -10,12 +11,37 @@ $(function(){
       }, 300)
       $(this).stop().children(".sub-menu").fadeIn(500);
       $('#globalnav-curtain').fadeIn();
+      $('html, body').css({'overflow': 'hidden'});
+      $('body').on('scroll touchmove mousewheel', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+      });
     }
     else{   // 서브메뉴가 없다면,
-      $('#globalnav-curtain').fadeOut();
+      $('#globalnav-curtain').stop().fadeOut();
+      $('body').off('scroll touchmove mousewheel');
     }
   });
 
+  // 아이콘 메뉴
+  $('.icon-wrap > li').click(function(){
+    $(this).stop().children(".sub-menu").animate({
+      height: 'show', 
+      width:'100%', 
+      opacity:"show"
+    }, 300)
+    $(this).stop().children(".sub-menu").fadeIn(500);
+    $('#globalnav-curtain').fadeIn();
+    $('html, body').css({'overflow': 'hidden'});
+    $('body').on('scroll touchmove mousewheel', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    });
+  })
+
+  // 서브메뉴 커서 out
   $('.sub-menu').mouseleave(function(){
     $(this).stop().animate({
       height: 'hide',
@@ -24,6 +50,8 @@ $(function(){
     }, 300);
     $(this).stop().fadeOut(300);
     $('#globalnav-curtain').stop().fadeOut();
+    $('html, body').css({'overflow': 'auto'});
+    $('body').off('scroll touchmove mousewheel');
   })
 
 
