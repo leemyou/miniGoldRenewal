@@ -27,30 +27,6 @@ $(function(){
   })
 
 
-  // swiper
-  // main Banner
-  // 이전 버튼 클릭
-  $('.swiper-btn-prev').click(function(){
-    const active_class_num = $('.swiper .swiper-slide-active').attr('class').split(' ')[1].slice(-1)
-    console.log(active_class_num);
-    $('.swiper-pagination-wrap > h1').animate({opacity:"0"}, 350, function(){
-      $('.swiper-pagination-wrap > h1').text(`0${active_class_num}`).animate({opacity:"1"}, 350)
-    })
-  })
-  // 다음 버튼 클릭
-  $('.swiper-btn-next').click(function(){
-    const active_class_num = $('.swiper .swiper-slide-active').attr('class').split(' ')[1].slice(-1)
-    console.log(active_class_num);
-    $('.swiper-pagination-wrap > h1').text(`0${active_class_num}`);
-    $('.swiper-pagination-wrap > h1').animate({opacity:"0"}, 350, function(){
-      $('.swiper-pagination-wrap > h1').text(`0${active_class_num}`).animate({opacity:"1"}, 350)
-    })
-  })
-
-
-
-
-
     // deliver-celeb
 
     const deliver_celeb_items = $(".item-container > a").get();   // 아이템 배열(4개)
