@@ -49,3 +49,22 @@
 .subbanner-img-wrap img {
     width: 100%;
 }
+
+
+@media (max-width: 1024px) {
+.sub-banner > .main > .text-wrap > h1{
+    font-size: 3rem;
+}
+.sub-banner > .main > .text-wrap > p{
+    font-size: 1.8rem;
+}
+}
+
+@media (max-width: 500px) {
+    .sub-banner > .main > .text-wrap > h1{
+        font-size: 2.5rem;
+    }
+    .sub-banner > .main > .text-wrap > p{
+        font-size: 1.4rem;
+    }
+}
