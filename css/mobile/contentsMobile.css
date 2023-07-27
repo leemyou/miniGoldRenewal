@@ -1,6 +1,5 @@
 @media (max-width: 1280px) {
     .main {
-        background-color: red;
         width: 900px;
     }
 
@@ -22,25 +21,236 @@
 
     /* item-menu-section */
     .item-menu-section{
-        flex-direction: column-reverse;
+        width: 100%;
     }
-    .item-menu-section > .btn-deliver-celeb-container {
-        margin: 0 0 24px 0;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
-        padding-right: 80px;
+    .item-container{
+        display: grid;
+        grid-template-columns: repeat(2, 30vw);
     }
+
 
     .banner-under-section-container > section {
     height: 400px;
     }
-
-
-    /* 달려온 시간을 응원하며 */
-    .section-time {
-        background-color: yellow;
-        height: 500px;
+    /* 365일이 안 지겨운 아이템 */
+    .section-365{
+        min-height: 500px; 
+    }
+    .section-365 > .contents-left{
+        width: 45%;
+    }
+    .section-365 > div:last-child {
+        width: calc(100% - 300px);
+    }
+    .section-365 .contents-center-right {
+        width: calc(100% - 30px);
+    }
+    /* 웃으며 삽시다! */
+    .section-smile {
+        max-height: 300px;
+    }
+    /* 카카오 프렌즈 x 미니골드 */
+    .section-kakao .contents-left .img-box {
+        display: none;
     }
 
+}
+
+
+@media (max-width: 1024px) {
+    .banner-under-section-container h1 {
+        margin-bottom: 24px;
+    }
+    .item-menu-section {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+    .btn-deliver-celeb-container {
+        flex-direction: row;
+        width: 97%;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .item-container{
+        display: grid;
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .brand-img-wrap {
+        width: 55%;
+    }
+    .brand-img-wrap > .brand-img-item {
+        display: none
+    }
+}
+
+@media (max-width: 700px) {
+    .banner-under-section-container h1 {
+        font-size: 3rem;
+        margin-bottom: 24px;
+    }
+
+    .banner-under-section-container > .section-time {
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        height: 300px;
+    }
+    .section-time > .contents-left {
+        width: 100%;
+    }
+    .section-time .contents-center {
+        display: none;
+    }
+    .section-time .contents-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 80%;
+    }
+
+    .section-365 > div:last-child {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: start;
+    }
+    .section-365 .contents-left {
+        display: none;
+    }
+    .section-365 .contents-center {
+        margin: 0;
+        width: 100%;
+    }
+    .section-365 .contents-center-right {
+        width: 100%;
+        margin: 0;
+    }
+
+    .section-cheer {
+        position: relative;
+        display: flex;
+    }
+    .section-cheer .contents-center {
+        display: none;
+    }
+    .section-cheer .contents-left {
+        position: absolute;
+        height: 85%;
+        width: calc(50% - 10px);
+        right: 0;
+        bottom: 0;
+    }
+    .section-cheer .contents-right > div {
+        position: absolute;
+        width: calc(50%);
+        height: 85%;
+        bottom: 0;
+    }
+
+    .banner-under-section-container > .section-smile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .section-smile .contents-left {
+        width: 100%;
+    }
+    .contents-center-right {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+    }
+
+    .section-kakao {
+        position: relative;
+    }
+    .section-kakao h1{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .section-kakao p{
+        position: absolute;
+        right: 0;
+        top: 5rem;
+        width: calc(50% - 15px);
+        min-width: 160px;
+    }
+    .section-kakao > .contents-left #btnMore{
+        position: absolute;
+        top: 15rem;
+        left: calc(50% + 15px);
+    }
+    .section-kakao .contents-center{
+        position: absolute;
+        width: 50%;
+        margin: 0;
+        height: calc(100% - 4rem);
+        bottom: 0;
+        left: 0;
+    }
+    .section-kakao .contents-right{
+        position: absolute;
+        width: calc(50% - 15px);
+        height: 40%;
+        bottom: 0;
+        right: 0;
+    }
+
+}
+
+/* 모바일 */
+@media (max-width: 500px) {
+    .banner-under-section-container h1 {
+        font-size: 2.4rem;
+        margin-bottom: 24px;
+    }
+
+    .section-time .contents-right {
+        width: 75%;
+    }
+
+    .banner-under-section-container > .section-cheer {
+        height: 280px;
+    }
+    .section-cheer .contents-right > div {
+        height: 225px;
+    }
+    .section-cheer .contents-left {
+        height: 225px;
+    }
+
+
+    .section-kakao > .contents-left #btnMore{
+        position: absolute;
+        top: 15rem;
+        left: calc(50% + 15px);
+    }
+    .section-kakao .contents-left p {
+        width: calc(50% - 15px);
+        left: calc(50% + 15px);
+    }
+    .section-kakao .contents-center{
+        position: absolute;
+        width: 160px;
+        margin: 0;
+        height: calc(100% - 5.6rem);
+        bottom: 0;
+        left: 0;
+    }
+    .section-kakao .contents-right{
+        position: absolute;
+        width: calc(50% - 15px);
+        height: 40%;
+        bottom: 0;
+        right: 0;
+    }
 }

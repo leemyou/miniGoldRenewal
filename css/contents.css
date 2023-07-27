@@ -72,8 +72,8 @@
     height: 100%;
 
     display: flex;
-    justify-content: flex-start;
-
+    justify-content: space-between;
+    gap: 60px;
 }
 
 .item-container{
@@ -125,7 +125,7 @@
 /* 버튼 */
 .btn-deliver-celeb-container {
     width: 100%;
-    margin: 20px 0 0 60px;
+    margin: 20px 0 0 0;
 
     display: flex;
     flex-direction: column;
@@ -196,12 +196,18 @@
     font-size: 4rem;
     font-weight: var(--font-regular);
     margin-bottom: 50px;
+    word-break: keep-all;
 }
 .banner-under-section-container p {
+    word-break: keep-all;
     line-height: 150%;
     color: #4B4B4B;
 }
 
+.section-time {
+    display: flex;
+    flex-direction: row;
+}
 .section-time > .contents-center {
     height: 100%;
     display: flex;
@@ -227,11 +233,18 @@
 .section-cheer > .contents-center{
     height: 50%;
 }
+.section-cheer > .contents-right > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 
 /* section-smile */
 .banner-under-section-container > .section-smile{
     height: 420px;
+    display: flex;
+    flex-direction: row;
 }
 
 

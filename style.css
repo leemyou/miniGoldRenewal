@@ -63,9 +63,10 @@ p {
 /* main 구조 */
 .main {
     max-width: 1280px;
+    width: 85%;
     height: 100%;
-
     margin: auto;
+    word-break: keep-all;
 }
 
 .img-in-box{
