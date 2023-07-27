@@ -1,9 +1,11 @@
 @import url(./css/header.css);
 @import url(./css/mainBanner.css);
 @import url(./css/contents.css);
-@import url(./css/contentsMobile.css);
 @import url(./css/subBanner.css);
 @import url(./css/footer.css);
+
+/* 모바일 */
+@import url(./css/mobile/contentsMobile.css);
 
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -36,6 +38,11 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: overlay;
 }
 
 a {
@@ -95,4 +102,29 @@ p {
 }
 .mg-b-460{
     margin-bottom: 400px;
+}
+
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar {
+    width: 14px;
+    background-color: transparent;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    box-shadow: inset 6px 6px 0 rgba(34, 34, 34, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 6px 6px 0 rgba(34, 34, 34, 0.35);
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    background-color: transparent;
+    /* background-color: red; */
 }

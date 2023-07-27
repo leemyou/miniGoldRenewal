@@ -1,0 +1,46 @@
+@media (max-width: 1280px) {
+    .main {
+        background-color: red;
+        width: 900px;
+    }
+
+    .brand {
+        height: 500px;
+        gap: 0;
+        width: 100%;
+    }
+    .brand-contents {
+        margin-left: 0;
+        width: 35%;
+    }
+    .brand-img-wrap {
+        width: 65%;
+        gap: 20px;
+    }
+
+
+
+    /* item-menu-section */
+    .item-menu-section{
+        flex-direction: column-reverse;
+    }
+    .item-menu-section > .btn-deliver-celeb-container {
+        margin: 0 0 24px 0;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-right: 80px;
+    }
+
+    .banner-under-section-container > section {
+    height: 400px;
+    }
+
+
+    /* 달려온 시간을 응원하며 */
+    .section-time {
+        background-color: yellow;
+        height: 500px;
+    }
+
+}

@@ -17,10 +17,11 @@
 
     display: flex;
     justify-content: space-between;
+    gap: 70px;
 }
 
 .brand-contents {
-    width: 370px;
+    max-width: 370px;
     margin-left: 70px;
     margin-top: 20px;
 
@@ -130,6 +131,11 @@
     flex-direction: column;
     gap: 10px;
 }
+.btn-deliver-celeb-container > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .btn-deliver-celeb{
     text-align: left;
     font-weight: var(--font-semibold);
@@ -153,6 +159,9 @@
 
 
 /* banner 아래 contents */
+.banner-under-section-container > section {
+    word-break: keep-all;
+}
 .contents-left,
 .contents-right{
     width: 440px;

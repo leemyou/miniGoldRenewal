@@ -19,7 +19,7 @@
 
     <title>miniGOLD Renewal</title>
 </head>
-<body>
+<body style="overflow-y: overlay;">
     <div id="globalnav-curtain" class="globalnav-curtain"></div> <!-- TODO: 활성화되면 스크롤 방지 넣어야함-->
     <!-- navigation bar -->
     <nav>
@@ -250,8 +250,10 @@
 
             <!-- TODO: 이거 왜 고장나냐 -->
             <div class="btn-deliver-celeb-container">
-                <button id="btnDeliver" class="btn-deliver-celeb active">QUICK DELIVERY</button>
-                <button id="btnCeleb" class="btn-deliver-celeb">CELEB</button>
+                <div>
+                    <button id="btnDeliver" class="btn-deliver-celeb active">QUICK DELIVERY</button>
+                    <button id="btnCeleb" class="btn-deliver-celeb">CELEB</button>
+                </div>
 
                 <a href="#" id="btnMore">MORE<img src="./img/icon/arrow half.svg"/></a>
             </div>
