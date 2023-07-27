@@ -1,0 +1,122 @@
+@media (max-width: 1024px) {
+    .globalnav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 60px;
+    }
+    .globalnav-menu > a { order: 2; }
+    .globalnav-menu > .sub-menu { order: 1; }
+    .globalnav-menu > .icon-wrap { order: 3; }
+
+    .globalnav-menu > .btn-mobile-menu {
+        width: 40px;
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: transparent;
+        font-size: 2.3rem;
+        margin-right: 100px;
+    }
+
+    .globalnav-menu > .menu-container {
+        all: unset; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80vw;
+        height: 100vh;
+        z-index: 999;
+        background-color: #ffffff;
+        padding-top: 80px;
+        display: none;
+    }
+    .menu-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+    }
+    .menu-wrap > li {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .menu-wrap > li > a {
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2.4rem;
+        padding: 5px 0;
+    }
+    .menu-wrap .sub-menu {
+        all: unset; 
+        /* display: flex; */
+        padding: 20px 0 40px 20px;;
+        display: none;
+    }
+    .globalnav-menu .btn-mobile-delete {
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 2.4rem;
+        border: none;
+        background-color: transparent;
+    }
+
+
+    .menu-wrap > li > a::before{
+        bottom: 0px;
+    }
+
+    
+    /* 로고 */
+    .globalnav-menu > a{
+        z-index: 10;
+    }
+    /* 아이콘 */
+    .btn-logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .menu-wrap > li > a {
+        font-size: 2rem;
+    }
+    .menu-wrap .sub-menu {
+        padding: 20px 0 20px 20px;
+    }
+    .sub-menu > ul > li > a {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .globalnav-menu > .menu-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 300px) {
+    .sub-menu > ul {
+        display: flex;
+        gap: 0 20px;
+    }
+    .menu-wrap .sub-menu {
+        padding: 10px 0 20px 10px;
+    }
+}

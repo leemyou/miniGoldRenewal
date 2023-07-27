@@ -28,6 +28,10 @@
     align-items: center;
     justify-self: center;
 }
+.globalnav-menu > .btn-mobile-menu,
+.globalnav-menu > .btn-mobile-delete{
+    display: none;
+}
 
 .menu-wrap {
     display: flex;
@@ -41,7 +45,6 @@
 .menu-wrap > li{
     display: flex;
     flex-direction: column;
-
     /* position: relative; */
     height: 100%;
 }
@@ -89,7 +92,6 @@
     position: fixed;
 
     display: none;
-    /* opacity: 0; */
 }
 .sub-menu > ul{
     display: flex;
