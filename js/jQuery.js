@@ -26,6 +26,14 @@ $(function(){
 
   // 아이콘 메뉴
   $('.icon-wrap > li').click(function(){
+    // 이전에 있던 메뉴 닫기
+    $('.sub-menu').stop().animate({
+      height: 'hide',
+      width:'100%', 
+      opacity:"show"
+    });
+    $('.sub-menu').stop().fadeOut(300);
+    // 메뉴 열기
     $(this).stop().children(".sub-menu").animate({
       height: 'show', 
       width:'100%', 
