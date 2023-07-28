@@ -1,8 +1,11 @@
 $(function(){
 
   // 네비게이션 바
-  $(window).resize(function(){ 
-    if (window.innerWidth > '1024px') {  // 다바이스 크기가 480이상일때 
+  // $(window).resize(function(){ 
+    media();
+  function media(){
+    const ww = $(window).width(); 
+    if (ww > 1024) {  // 다바이스 크기가 1024이상일때 
       // 메뉴
       $('.menu-wrap > li').mouseenter(function(){
         if($(this).children().hasClass("sub-menu")) {   // 서브메뉴가 존재한다면,
@@ -21,6 +24,12 @@ $(function(){
           });
         }
         else{   // 서브메뉴가 없다면,
+          // $(".sub-menu").stop().animate({
+          //   height: 'hide', 
+          //   width:'100%', 
+          //   opacity:"show"
+          // }, 300)
+          $(".sub-menu").fadeOut(500);
           $('#globalnav-curtain').stop().fadeOut();
           $('body').off('scroll touchmove mousewheel');
         }
@@ -38,13 +47,13 @@ $(function(){
         $('html, body').css({'overflow': 'auto'});
         $('body').off('scroll touchmove mousewheel');
       })
-  } else {
-    /* 스크립트내용*/ 
+  } 
+  else {
     // 메뉴 오픈
     $('.btn-mobile-menu').click(function(){
       $('.globalnav-menu > .menu-container').stop().animate({
-        height: '100vh', 
-        width:'show', 
+        height: 'show', 
+        width:'100%', 
         opacity:"show"
       }, 300)
       $('.globalnav-menu > .menu-container').fadeIn(500);
@@ -77,8 +86,13 @@ $(function(){
       $('body').off('scroll touchmove mousewheel');
     })
   }
-    
-}).resize(); 
+}
+$(window).resize(function(){ 
+  ww = $(window).width(); 
+  media();
+});
+
+// }).resize(); 
 
 
   // 아이콘 메뉴

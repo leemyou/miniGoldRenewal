@@ -29,8 +29,9 @@
     justify-self: center;
 }
 .globalnav-menu > .btn-mobile-menu,
-.globalnav-menu > .btn-mobile-delete{
+.globalnav-menu .btn-mobile-delete{
     display: none;
+    cursor: pointer;
 }
 
 .menu-wrap {
@@ -63,14 +64,13 @@
 .menu-wrap > li > a::before{
     content: "";
     position: absolute;
-    bottom: 15px;
+    bottom: -2px;
     width: 100%;
     height: 2px;
     background-color: #F6CA2A;
     transform: scaleX(0);
     transition:transform .25s ease-in-out;
     transform-origin: right;
-    
 }
 .menu-wrap > li > a:hover::before {
     transform: scaleX(1);
