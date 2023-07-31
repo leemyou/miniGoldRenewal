@@ -5,7 +5,7 @@
 @import url(./css/footer.css);
 
 /* 모바일 */
-/* @import url(./css/mobile/headerMobile.css); */
+@import url(./css/mobile/headerMobile.css);
 @import url(./css/mobile/contentsMobile.css);
 
 @font-face {

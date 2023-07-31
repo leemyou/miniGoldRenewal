@@ -4,8 +4,8 @@
         flex-direction: row;
         padding: 0 60px;
     }
-    .globalnav-menu > a { order: 2; margin: 0 auto; }
-    .globalnav-menu > .sub-menu { order: 1; }
+    .globalnav-menu > a { margin: 0 auto; }
+    .globalnav-menu > .menu-container { display: none; }
     .globalnav-menu > .icon-wrap { display: none; }
 
     .globalnav-menu > .btn-mobile-menu {
@@ -22,58 +22,114 @@
         position: absolute;
     }
 
-    /* .globalnav-menu > .menu-container {
-        all: unset; 
+    .mobile-menu-white-box {
+        /* display: flex; */
+        display: none;
+        flex-direction: column;
+        width: 80%;     /*TODO: 더 작은 화면 일 때는 100%*/
+        height: 100vh;
+        background-color: #fff;
         position: fixed;
         top: 0;
         left: 0;
-        width: 80vw;
-        height: 100vh;
         z-index: 999;
-        background-color: #ffffff;
-        padding-top: 80px;
-    }
-    .menu-wrap {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        height: auto;
-    }
-    .menu-wrap > li {
-        margin: 0 auto;
-        width: 90%;
-    }
-    .menu-wrap > li > a {
-        text-align: left;
+        padding: 20px 20px 30px 20px;
         justify-content: space-between;
-        align-items: center;
-        font-size: 2.4rem;
-        padding: 5px 0;
     }
-    .menu-wrap .sub-menu {
-        all: unset; 
-        padding: 20px 0 40px 20px;;
-        display: none;
-    }
-    .globalnav-menu .btn-mobile-delete {
-        z-index: 9999;
-        display: none;
+
+    .mobile-menu-white-box .btn-mobile-delete {
+        display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        top: 20px;
-        left: 20px;
         width: 40px;
         height: 40px;
-        font-size: 2.4rem;
+        font-size: 2.5rem;
         border: none;
         background-color: transparent;
     }
 
+    .mobile-menu-container {
+        background-color: #fff;
+    }
 
-    .menu-wrap > li > a::before{
-        bottom: 0px;
-    } */
+
+    .moblie-search-box {
+        width: 100%;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid #4B4B4B;
+        margin: 12px 0 24px 0;
+    }
+    .moblie-search-box > button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        font-size: 1.5rem;
+        border: none;
+        background-color: transparent;
+    }
+    .moblie-search-box > input {
+        padding: 0 10px;
+        width: 100%;
+        border: none;
+    }
+    .moblie-search-box > input:focus {
+        outline:none;
+    }
+
+    .mobile-sub-menu{
+        display: none;
+    }
+    .mobile-menu-wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .mobile-menu-wrap > li > a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2rem;
+        line-height: 100%;
+        padding: 3px 0;
+    }
+    .mobile-menu-wrap > li > a > ion-icon{
+        transition: .5s;
+    }
+
+    .mobile-menu-wrap .mobile-sub-menu {
+        margin-top: 10px;
+        margin-left: 20px;
+        /* width: 50%; */
+    }
+    .mobile-sub-menu-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    .mobile-sub-menu-wrap > li {
+        display: flex;
+    }
+    .mobile-sub-menu-wrap > li > a{
+        color: #6e6e6e;
+        font-size: 1.6rem;
+    }
+
+    .mobile-other-menu-container {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+        z-index: -1;
+    }
 
     
     /* 로고 */
@@ -110,6 +166,10 @@
         justify-content: space-between;
         padding: 0 20px;
         height: 50px;
+    }
+
+    .mobile-menu-white-box {
+        width: 100%;
     }
 
     .btn-logo {

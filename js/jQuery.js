@@ -2,7 +2,7 @@ $(function(){
 
   // 네비게이션 바
   // $(window).resize(function(){ 
-    media();
+  media();
   function media(){
     const ww = $(window).width(); 
     if (ww > 1024) {  // 다바이스 크기가 1024이상일때 
@@ -24,11 +24,6 @@ $(function(){
           });
         }
         else{   // 서브메뉴가 없다면,
-          // $(".sub-menu").stop().animate({
-          //   height: 'hide', 
-          //   width:'100%', 
-          //   opacity:"show"
-          // }, 300)
           $(".sub-menu").fadeOut(500);
           $('#globalnav-curtain').stop().fadeOut();
           $('body').off('scroll touchmove mousewheel');
@@ -48,15 +43,16 @@ $(function(){
         $('body').off('scroll touchmove mousewheel');
       })
   } 
+  // 모바일
   else {
     // 메뉴 오픈
     $('.btn-mobile-menu').click(function(){
-      $('.globalnav-menu > .menu-container').stop().animate({
+      $('.mobile-menu-white-box').stop().animate({
         height: 'show', 
         width:'100%', 
         opacity:"show"
       }, 300)
-      $('.globalnav-menu > .menu-container').fadeIn(500);
+      $('.mobile-menu-white-box').fadeIn(500);
       $('#globalnav-curtain').fadeIn();
       $('html, body').css({'overflow': 'hidden'});
       $('body').on('scroll touchmove mousewheel', function(event) {
@@ -65,32 +61,38 @@ $(function(){
         return false;
       });
     });
-    // 서브 메뉴 오픈
-    $('.menu-wrap > li').click(function(){
-        $(this).children(".sub-menu").toggle("slow");
+    // 서브 메뉴 오픈&닫기
+    $('.mobile-menu-wrap > li').click(function(){
+      if($(this).children().hasClass('mobile-sub-menu')){
+        $(this).children(".mobile-sub-menu").toggle("slow");
+        $('.mobile-other-menu-container').toggle(300);
+        $(this).find('.icon-inner').css({transform:'rotate(45deg)'})
+      }
     });
         
 
     
     // 메뉴 닫기
     // .globalnav-menu .btn-mobile-delete
-    $('.globalnav-menu .btn-mobile-delete, #globalnav-curtain').click(function(){
-      $('.globalnav-menu > .menu-container').stop().animate({
+    $('.btn-mobile-delete, #globalnav-curtain').click(function(){
+      $('.mobile-menu-white-box').stop().animate({
         height: 'hide',
         width:'100%', 
         opacity:"show"
       }, 300);
-      $('.globalnav-menu > .menu-container').stop().fadeOut(300);
+      $('.mobile-menu-white-box').stop().fadeOut(300);
       $('#globalnav-curtain').stop().fadeOut();
       $('html, body').css({'overflow': 'auto'});
       $('body').off('scroll touchmove mousewheel');
     })
   }
 }
-$(window).resize(function(){ 
-  ww = $(window).width(); 
-  media();
-});
+
+  // 화면 사이즈에 따른 반응형
+  $(window).resize(function(){ 
+    ww = $(window).width(); 
+    media();
+  });
 
 // }).resize(); 
 
