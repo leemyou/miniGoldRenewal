@@ -145,7 +145,7 @@ $(function(){
       else{   // CELEB이 활성화 되어있다면,
         $.each (deliver_celeb_items, function(i, el){
           // TODO: 위에처럼 변경바람
-          $(this).find('img').attr("src", "https://images.unsplash.com/photo-1689874099574-b2c02629348b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60");
+          $(this).find('img').attr("src", `../img/celeb0${i+1}.png`);
         })
       }
 

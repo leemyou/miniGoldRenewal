@@ -82,9 +82,13 @@
     grid-template-rows: 300px 300px;
     gap: 20px;
 }
-.item-container > a > div{
-    position: relative;
 
+.item-container > a {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.item-container > a > div{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,7 +97,7 @@
 
     background-color: #F6F6F6;
 }
-.item-container > a > div > .item-sub-text{
+.item-container > a .item-sub-text{
     opacity: 0;
 
     position: absolute;
@@ -110,7 +114,7 @@
     align-items: center;
     justify-content: center;
 }
-.item-container a > div > .item-sub-text:hover{
+.item-container > a:hover > .item-sub-text{
     transition: .2s;
     opacity: 1;
 }

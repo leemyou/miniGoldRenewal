@@ -63,7 +63,6 @@
     }
     .item-menu-section {
         flex-direction: column-reverse;
-        gap: 24px;
     }
     .btn-deliver-celeb-container {
         flex-direction: row;
@@ -75,6 +74,55 @@
         display: grid;
         grid-template-columns: repeat(2, 40vw);
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    .item-menu-section {
+        gap: 40px;
+    }
+    .item-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, calc(100%/2 - 10px));
+        row-gap: 30px;
+    }
+    .item-container > a {
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .item-container > a > div:first-child {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 90%;
+        border-radius: 20px;
+    }
+    .item-container > a > div:first-child > div{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .item-container > a > div:first-child > div > img{
+        width: 100%;
+        height: 100%;
+    }
+    /* .item-container > a > .br-20 {
+        
+    } */
+    .item-container > a > .item-sub-text{
+        all: unset;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .item-sub-text > .item-price {
+        font-weight: 400;
+        color: #A7A7A7;
     }
 }
 
@@ -88,6 +136,7 @@
 }
 
 @media (max-width: 700px) {
+
     .banner-under-section-container h1 {
         font-size: 3rem;
         margin-bottom: 24px;
@@ -209,6 +258,24 @@
 
 /* 모바일 */
 @media (max-width: 500px) {
+    .brand {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .brand-contents {
+        width: 100%;
+    }
+    .brand-img-wrap {
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .item-container{
+        gap: 9px;
+    }
+
+
     .banner-under-section-container h1 {
         font-size: 2.4rem;
         margin-bottom: 24px;
@@ -252,5 +319,48 @@
         height: 40%;
         bottom: 0;
         right: 0;
+    }
+}
+
+@media (max-width: 300px) {
+
+    .section-time .contents-right {
+        width: 65%;
+        height: 120px;
+    }
+
+    .banner-under-section-container > section.section-kakao {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        height: 300px;
+    }
+    .section-kakao > .contents-left {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .section-kakao h1 {
+        position: static;
+    }
+    .section-kakao p {
+        position: static;
+        display: flex;
+        left: 0;
+        width: 100%;
+    }
+    .section-kakao > .contents-left #btnMore {
+        position: static;
+        position: flex;
+        top: 12rem;
+        left: 5px;
+    }
+    .section-kakao .contents-center{
+        display: none;
+    }
+    .section-kakao .contents-right {
+        position: static;
+        width: 100%;
+        height: 90%;
     }
 }
