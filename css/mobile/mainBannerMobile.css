@@ -1,0 +1,100 @@
+@media (max-width: 1000px) {
+    .swiper-slide .item-wrap {
+        width: 550px;
+        height: 550px;
+    }
+
+    
+    .swiper-slide .item-container > .btn-more-wrap {
+        inset: unset;
+
+        bottom: 24px;
+        left: 0;
+        gap: 14px;
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    .swiper-slide > .item-container > .btn-more-wrap > a{
+        all: unset;
+        font-size: 1.4rem;
+        color: #fff;
+        font-weight: 200;
+        text-decoration: underline;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        gap: 3px;
+    }
+    .swiper-slide.swiper-slide-active > .item-container > .btn-more-wrap > p {
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+
+    .swiper-btn-container {
+        margin: 0;
+        bottom: 50%;
+        left: 0;
+        transform: translateY(50%);
+        z-index: 999;
+    }
+    .swiper-pagination-wrap {
+        display: none;
+    }
+    .swiper-btn-wrap {
+        display: flex;
+        gap: 0px;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    /* .swiper-pagination-wrap {
+        display: none;
+    }
+    .swiper-btn{
+        background-color: red;
+        position: absolute;
+        top: 50%;
+    }
+    .swiper-btn-next {
+        position: absolute;
+        right: 0;
+    } */
+}
+
+
+@media (max-width: 600px) {
+    .swiper-slide .item-wrap {
+        width: 450px;
+        height: 450px;
+    }
+
+    .swiper-slide > .back-text {
+        display: none;
+    }
+    .swiper-slide > .front-text { 
+        max-width: 480px;
+        width: 100%;
+        font-size: 6rem;
+    
+        position: absolute;
+        bottom: 100px;
+        left: 0%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 100;
+    }
+    .swiper-btn {
+        background-color: transparent;
+        font-size: 25px;
+        color: #c0c0c0;
+        cursor: pointer;
+    }
+}
