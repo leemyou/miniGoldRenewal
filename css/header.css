@@ -33,6 +33,9 @@
     display: none;
     cursor: pointer;
 }
+.mobile-menu-white-box {
+    display: none;
+}
 
 .menu-wrap {
     display: flex;

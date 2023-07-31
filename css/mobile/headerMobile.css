@@ -23,10 +23,8 @@
     }
 
     .mobile-menu-white-box {
-        /* display: flex; */
-        display: none;
         flex-direction: column;
-        width: 80%;     /*TODO: 더 작은 화면 일 때는 100%*/
+        width: 80%;
         height: 100vh;
         background-color: #fff;
         position: fixed;
