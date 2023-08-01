@@ -23,7 +23,13 @@
     .item-menu-section{
         width: 100%;
     }
-    .item-wrap{
+    .item-menu-section .item-container {
+        display: none;
+    }
+    .item-menu-section .item-container.active {
+        display: block;
+    }
+    .item-menu-section .item-wrap{
         display: grid;
         grid-template-columns: repeat(2, 30vw);
     }
@@ -70,49 +76,65 @@
         align-items: flex-end;
         justify-content: space-between;
     }
-    .item-wrap{
+    /* .item-wrap{
         display: grid;
         grid-template-columns: repeat(2, 40vw);
         grid-template-rows: repeat(2, 1fr);
-    }
+    } */
 
     .item-menu-section {
         gap: 40px;
     }
-    .item-wrap{
+    .item-menu-section .item-wrap{
         width: 100%;
-        display: grid;
         grid-template-columns: repeat(2, calc(100%/2 - 10px));
+        grid-template-rows: 1fr 1fr;
         row-gap: 30px;
     }
-    .item-wrap > a {
+    .item-menu-section .item-wrap > a {
         overflow: visible;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    .item-wrap > a > div:first-child {
+    .item-menu-section .item-wrap > a > div:first-child {
         position: relative;
         width: 100%;
         height: 0;
         padding-bottom: 90%;
         border-radius: 20px;
     }
-    .item-wrap > a > div:first-child > div{
+    .item-menu-section .item-wrap > a > div:first-child > div{
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
     }
-    .item-wrap > a > div:first-child > div > img{
+    .item-menu-section .item-wrap > a > div:first-child > div > img{
         width: 100%;
         height: 100%;
     }
     /* .item-wrap > a > .br-20 {
         
     } */
-    .item-wrap > a > .item-sub-text{
+    .item-menu-section .item-wrap > a .item-sub-text{
+        /* opacity: 0;
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        background-color: rgba(66, 66, 66, .4);
+        width: 100%;
+        height: 100%;
+    
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+
         all: unset;
         margin-left: 10px;
         display: flex;

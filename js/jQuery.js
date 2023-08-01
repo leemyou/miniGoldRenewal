@@ -125,28 +125,7 @@ $(function(){
       // class 활성화
       $('.btn-deliver-celeb').removeClass("active");
       $(this).addClass("active");
-
-      // 이미지 변경
-      if($("#btnDeliver").hasClass("active")){    // QUICK DELIVERY이 활성화 되어있다면,
-        $.each (deliver_celeb_items, function(i, el){
-          $(this).find('img').attr("src", `../img/delivery0${i+1}.png`);
-        })
-      }
-      else{   // CELEB이 활성화 되어있다면,
-        $.each (deliver_celeb_items, function(i, el){
-          // TODO: 위에처럼 변경바람
-          $(this).find('img').attr("src", `../img/celeb0${i+1}.png`);
-        })
-      }
-
-      // 글자 변경
-      $.getJSON('../documents/deliver-celeb-items-list.json', function(data){
-        $.each(deliver_celeb_items, function(i, el){
-          $(this).find('.item-name').text(data[thisBtn][i].name)
-          $(this).find('.item-price').text(`${data[thisBtn][i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원`)
-          $(this).attr("href", `#${data[thisBtn][i].name}`)   // TODO: 링크도 제이슨 파일에 넣고 변경
-        })
-      })
+      $('.item-container').removeClass('active')
+      $(`#${thisBtn}`).addClass("active");
     })
-
 });
