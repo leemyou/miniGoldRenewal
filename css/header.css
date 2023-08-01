@@ -29,11 +29,8 @@
     justify-self: center;
 }
 .globalnav-menu > .btn-mobile-menu,
-.globalnav-menu .btn-mobile-delete{
-    display: none;
-    cursor: pointer;
-}
-.mobile-menu-white-box {
+.mobile-menu-white-box,
+.mobile-menu-white-box .btn-mobile-delete{
     display: none;
 }
 

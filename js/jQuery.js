@@ -51,7 +51,7 @@ $(function(){
         height: 'show', 
         width:'100%', 
         opacity:"show"
-      }, 300)
+      }, 300);
       $('.mobile-menu-white-box').fadeIn(500);
       $('#globalnav-curtain').fadeIn();
       $('html, body').css({'overflow': 'hidden'});
