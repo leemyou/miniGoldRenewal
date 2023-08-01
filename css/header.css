@@ -29,8 +29,9 @@
     justify-self: center;
 }
 .globalnav-menu > .btn-mobile-menu,
-.mobile-menu-container,
-.mobile-other-menu-container,
+.mobile-menu-white-box,
+/* .mobile-menu-container, */
+/* .mobile-other-menu-container, */
 .mobile-menu-white-box .btn-mobile-delete{
     display: none;
 }
