@@ -58,10 +58,12 @@ $(function(){
     });
     // 서브 메뉴 오픈&닫기
     $('.mobile-menu-wrap > li').click(function(){
+      // $('.mobile-sub-menu').removeClass('active')
+      // $(this).find('.mobile-sub-menu').addClass('active')
       if($(this).children().hasClass('mobile-sub-menu')){
-        $(this).children(".mobile-sub-menu").toggle("slow");
-        $('.mobile-other-menu-container').toggle(300);
-        $(this).find('.icon-inner').css({transform:'rotate(45deg)'})
+        $(this).children(".mobile-sub-menu").stop().toggle("slow");
+        // $('.mobile-other-menu-container').stop().toggle(300);
+        $(this).find('svg').css({transform:`rotate(180deg)`})
       }
     });
         
