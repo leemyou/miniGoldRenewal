@@ -47,12 +47,7 @@ $(function(){
   else {
     // 메뉴 오픈
     $('.btn-mobile-menu').click(function(){
-      $('.mobile-menu-white-box').stop().animate({
-        height: 'show', 
-        width:'100%', 
-        opacity:"show"
-      }, 300);
-      $('.mobile-menu-white-box').fadeIn(500);
+      $('.mobile-menu-white-box').addClass('active')
       $('#globalnav-curtain').fadeIn();
       $('html, body').css({'overflow': 'hidden'});
       $('body').on('scroll touchmove mousewheel', function(event) {
@@ -75,12 +70,7 @@ $(function(){
     // 메뉴 닫기
     // .globalnav-menu .btn-mobile-delete
     $('.btn-mobile-delete, #globalnav-curtain').click(function(){
-      $('.mobile-menu-white-box').stop().animate({
-        height: 'hide',
-        width:'100%', 
-        opacity:"show"
-      }, 300);
-      $('.mobile-menu-white-box').stop().fadeOut(300);
+      $('.mobile-menu-white-box').removeClass('active');
       $('#globalnav-curtain').stop().fadeOut();
       $('html, body').css({'overflow': 'auto'});
       $('body').off('scroll touchmove mousewheel');
